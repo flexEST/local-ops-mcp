@@ -1,37 +1,9 @@
-# Copy to local-ops.toml and edit only the sections you need.
-# Relative paths are relative to this TOML file.
+# Copy to local-ops.toml and enable the aliases you need.
+# Relative file paths are interpreted relative to this TOML file.
 
-[sqlite]
-path = "demo.sqlite3"
-
-[postgres]
-dsn_env = "LOCAL_OPS_POSTGRES_DSN"
-
-# Supply the documented read-only status URL for your router model.
 # [routers.home]
 # url = "http://192.168.1.1/YOUR_STATUS_PATH"
 # token_env = "LOCAL_OPS_ROUTER_TOKEN"  # HTTPS required for Bearer tokens
 
 # [dns_logs.lan]
 # path = "/var/log/dnsmasq.log"
-
-# [serial.esp32]
-# port = "/dev/ttyUSB0"
-# baudrate = 115200
-
-# [mqtt]
-# host = "mqtt.example.com"
-# port = 8883
-# tls = true
-# ca_file = "/path/to/ca.pem"  # Optional private CA
-# username = "bench-mcp"
-# password_env = "LOCAL_OPS_MQTT_PASSWORD"
-# enable_relay_control = false
-
-# [mqtt.sensors.temperature]
-# topic = "bench/esp32/temperature"
-
-# [mqtt.relays.led]
-# topic = "bench/esp32/relay/led/set"
-# on_payload = "ON"
-# off_payload = "OFF"
